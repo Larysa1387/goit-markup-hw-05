@@ -8,7 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -29,6 +28,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Утилиты */
@@ -276,7 +276,7 @@ background-image: url('../images/clock1.svg');
   position: relative;
 }
 
-.thumb .label {
+.thumb > .label {
   display: inline-block;
   position: absolute;
   left: 0;
@@ -433,6 +433,7 @@ background-image: url('../images/clock1.svg');
 .sign-in {
   display: block;
   font-style: normal;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
@@ -448,7 +449,6 @@ background-image: url('../images/clock1.svg');
 .nets.list .social-nets:not(:last-child) {
   margin-right: 10px;
 }
-
 
 .social-nets::after {
   display: inline-flex;
@@ -485,19 +485,6 @@ background-image: url('../images/clock1.svg');
 
 
   /* portfolio style */
-
-  /* .thumb::before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: inline-block;
-
-  width: 370px;
-  height: 70px;
-  content: "";
-  background-color: rgba(47, 48, 58, 0.8);
-
-} */
 
 .visually-hidden {
   position: absolute;
@@ -585,8 +572,39 @@ button:focus{
 
 .link-image {
   display: block;
+  height: auto;
 }
 
 .products.list .item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.overlay{
+  position: relative;
+}
+
+.description {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+.product-thumb:hover .description {
+  opacity: 1;
 }
