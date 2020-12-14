@@ -76,8 +76,6 @@ a {
 .main-nav {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .nav.list {
@@ -100,6 +98,8 @@ a {
 .nav .link {
   position: relative;
   display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -111,7 +111,7 @@ a {
 .nav .link.current::after {
   content: '';
   position: absolute;
-  bottom: -200%;
+  bottom: 0;
   left: 0;
 
   display: block;
@@ -133,6 +133,8 @@ a {
 .nav-contacts .link {
   display: flex;
   align-items: center;
+    padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -369,7 +371,8 @@ background-image: url('../images/clock1.svg');
   fill: var(--icon-color);
 }
 
-.icon.link:hover {
+.icon.link:hover,
+.icon.link:focus {
   --color4: var(--primary-white-color);
   background-color: var(--accent-color);
 }
@@ -397,7 +400,8 @@ background-image: url('../images/clock1.svg');
   border-radius: 4px;
 }
 
-.client.link:hover {
+.client.link:hover,
+.client.link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
 }
@@ -494,7 +498,8 @@ background-image: url('../images/clock1.svg');
   background-image: url('../images/linkedin-2.svg');
 }
 
-.social-nets:hover::after {
+.social-nets:hover::after,
+.social-nets:focus::after {
   cursor: pointer;
   background-color: var(--accent-color);
 }
