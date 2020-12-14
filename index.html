@@ -48,7 +48,7 @@
   <!-- block Hero -->
   <section class="hero">
     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-    <button class="hero-link" type="button">Заказать услугу</button>
+    <button class="hero-link" type="button" data-modal-open>Заказать услугу</button>
   </section>
   <main>
     <!-- Особенности Features -->
@@ -333,10 +333,16 @@
             <a class="link" href=""></a>
           </li>
         </ul>
-     </div>
+    </div>
     </div>
   </footer>
 
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="close-btn" data-modal-close>&#10006</button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
